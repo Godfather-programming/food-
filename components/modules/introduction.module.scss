@@ -1,3 +1,6 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
 .container {
     display: flex;
     flex-direction: column;
@@ -11,12 +14,14 @@
     display: flex;
     justify-content: space-between;
     max-width: 800px;
+    margin-top: 50px;
 
     .box {
         text-align: center;
-        // display: flex;
-        // flex-direction: column;
-        // align-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: #fff;
         width: 120px;
         height: 120px;
@@ -25,9 +30,25 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+        padding: 70px 10px;
+
         
-        .details {
-            margin-top: 18px;
-        }
+
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    @include textStyle(rgb(38, 38, 38), 1rem, 700);
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

@@ -21,14 +21,20 @@ function Introduction() {
             <div className={styles.box}>
                 <div className={styles.details}>
                <Food />
-               <p> Best Restaurant </p>
+               <div className={styles.title}>
+                 <p> Best </p>
+                 <p> Restaurant </p>
+               </div>
                 </div>
             </div>
 
             <div className={styles.box}>
                 <div className={styles.details}>
                <Choice />
-               <p> Your Choice </p>
+                <div className={styles.title}>
+                <p> Your </p>
+                <p> Choice </p>
+                </div>
                 </div>
             </div>
 
