@@ -1,0 +1,43 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.Header {
+    
+
+    .header {
+       width: 800px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin: 20px auto;
+       background-color: $bgcolor;
+    }
+
+    .title {
+        @include textStyle($lightGreen, 1.1rem, 900)
+    }
+    
+    .option {
+        display: flex;
+        gap: 15px;
+        font-weight: 600;
+        color: #455A64;
+    }
+}
+
+.footer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 10px auto;
+   background-color: $bgcolor;
+   margin-top: 100px;
+   padding: 10px;
+   background-color: $darkGreen;
+   color: #fff;
+   font-weight: 500;
+
+   a {
+    @include textStyle(#455A64, 1.1rem, 600)
+   }
+}
