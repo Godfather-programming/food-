@@ -1,0 +1,50 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .signs {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+
+        .section {
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .distance {
+        display: inline-block;
+        max-width: 800px;
+        height: 15px;
+        background-color: #e0e0e0;
+
+        .text {
+            width: 100%;
+        }
+
+}
+}
+
+@include media(M) {
+     .signs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+     }
+
+    //  .section {
+    //     width: 600px;
+    //  }
+}

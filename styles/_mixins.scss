@@ -3,3 +3,24 @@
     font-size: $size;
     font-weight: $weight;
 }
+
+@mixin media($size) {
+    @if($size == M) {
+        @media (max-width: 800px) {
+            @content;
+        }
+    } @else if($size == L) {
+        @media (min-width: 800px) and (max-width: 1200px) {
+            @content;
+        }
+    } @else if($size == S) {
+        @media (max-width: 500px) {
+            @content;
+        }
+    }
+}
+
+@mixin distance() {
+    max-width: 800px;
+    margin: 50px auto;
+}

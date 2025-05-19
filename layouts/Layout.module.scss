@@ -5,7 +5,7 @@
     
 
     .header {
-       width: 800px;
+       max-width: 800px;
        display: flex;
        align-items: center;
        justify-content: space-between;
@@ -40,4 +40,10 @@
    a {
     @include textStyle(#455A64, 1.1rem, 600)
    }
+}
+
+@include media(M) {
+    .Header {
+       padding: 10px;
+    }
 }

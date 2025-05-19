@@ -4,10 +4,12 @@
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
-    margin: 50px auto;
+    @include distance();
 
-
+ 
+    h3 {
+        color: $darkGreen;
+    } 
 }
 
 .wrapper {
@@ -50,5 +52,20 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@include media(M) {
+    .container {
+        padding: 10px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        place-items: center;
+    }
+    .box {
+        margin-top: 15px;
     }
 }

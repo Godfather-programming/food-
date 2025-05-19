@@ -2,24 +2,24 @@
 @import "../../styles/variables";
 
 .container {
-    margin: 80px auto;
-    max-width: 800px;
+    @include distance();
+
     display: flex;
 
     
     img {
-        width: 450px;
+        width: 400px;
     }
 }
 
 .explanations {
-    width: 400px;
+    width: 450px;
 
     .title {
  
 
       span {
-        display: block;
+        display: inline-block;
         width: 110px;
         height: 4px;
         background-color: $darkGreen;
@@ -32,7 +32,8 @@
 
     p {
         width: 450px;
-        @include textStyle($textSecondary, 1rem, 500)
+        @include textStyle($textSecondary, 1rem, 500);
+        text-align: justify;
     }
 
     button {
@@ -48,4 +49,24 @@
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
 }
+}
+
+@include media(M) {
+    .container {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .title {
+            margin-right: 15px;
+        }
+
+        span {
+            margin-bottom: 20px;
+        }
+        img {
+            margin-top: 40px;
+        }
+    }
 }

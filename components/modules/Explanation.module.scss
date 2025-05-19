@@ -1,0 +1,30 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+        color: $darkGreen;
+    }
+
+    p {
+        margin-top: 20px;
+        @include textStyle(rgb(19, 19, 19), 1rem, 700);
+        text-align: justify;
+        line-height: 25px;
+    }
+}
+
+
+
+@include media(M) {
+    .container{
+           text-align: center;
+           padding: 10px;
+        p {
+           text-align: center;
+        }
+    }
+}
